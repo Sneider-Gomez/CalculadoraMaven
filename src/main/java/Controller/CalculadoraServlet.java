@@ -42,7 +42,6 @@ public class CalculadoraServlet extends HttpServlet {
 		switch (op) {
 		case 1:
 			resultado = "" + (n1+n2);
-                default:
 			break;
 		case 2:
 			resultado = "" + (n1-n2);
@@ -56,8 +55,10 @@ public class CalculadoraServlet extends HttpServlet {
 			}else {
 				resultado = "" + (n1/n2);
 			}
+			
 			break;
-		
+		default:
+			break;
 		}
 		
 		request.getSession().setAttribute("resultado", resultado);
